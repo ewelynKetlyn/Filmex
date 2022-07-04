@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Filmex">
         <activity
+            android:name=".MovieActivity"
+            android:exported="false" />
+        <activity
             android:name=".splachActivity"
             android:exported="true"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar">
@@ -21,9 +24,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-
-        </activity>
+            android:exported="true"></activity>
     </application>
 
 </manifest>
