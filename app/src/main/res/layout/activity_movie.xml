@@ -7,13 +7,6 @@
     android:background="@color/black"
     tools:context=".MovieActivity">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/movie_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:color/transparent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
         android:id="@+id/movie_img"
         android:layout_width="match_parent"
@@ -22,5 +15,87 @@
         android:src="@drawable/shadows"
         app:layout_constraintDimensionRatio="16:9"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/movie_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:src="@drawable/ic_baseline_play_circle_outline_24"
+        app:layout_constraintBottom_toBottomOf="@id/movie_img"
+        app:layout_constraintEnd_toEndOf="@id/movie_img"
+        app:layout_constraintStart_toStartOf="@id/movie_img"
+        app:layout_constraintTop_toTopOf="@id/movie_img" />
+
+    <TextView
+        android:id="@+id/movie_txt_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="16dp"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/movie_img"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="As branquelas" />
+
+    <TextView
+        android:id="@+id/movie_txt_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3sp"
+        android:maxLines="3"
+        android:textColor="@color/gray_light"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/movie_img"
+        tools:text="Dois policias se disfarçam de mulheres da alta sociedade para descobrir crimes e acabam entrando em muitas confusões." />
+
+    <TextView
+        android:id="@+id/movie_txt_cast"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:ellipsize="end"
+        android:lineSpacingExtra="3sp"
+        android:maxLines="3"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/movie_txt_desc"
+        tools:text="Dois policias se disfarçam de mulheres da alta sociedade para descobrir crimes e acabam entrando em muitas confusões." />
+
+    <TextView
+        android:id="@+id/txt_fixed"
+        android:textAllCaps="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/similar"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/movie_txt_cast" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/movie_rv_similar"
+        app:layout_constraintTop_toBottomOf="@id/txt_fixed"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
